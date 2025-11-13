@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Gilmore Girls Fan Page</title>
+  <link rel="stylesheet" href="css/estiloscolores.css?v=6" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="nav-list">
+        <li><a href="index.html" class="textobotton">HOME</a></li>
+        <li><a href="personajes.html" class="textobotton">Personajes</a></li>
+        <li><a href="episodios.html" class="textobotton">Episodios</a></li>
+        <li><a href="contacto.html" class="textobotton" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+    <h1 class="titulo">Contacto</h1>
+    <p class="subtitulo">¿Tenés dudas, ideas o querés colaborar? ¡Escribime!</p>
+  </header>
+
+  <main>
+    <div id="form-status" class="alert" role="status" aria-live="polite"></div>
+    <form id="contact-form" novalidate class="formulario tarjeta tarjeta--elev">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="Nombre" required minlength="2"
+               pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(?:[\s'-][A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*$"
+               aria-describedby="err-nombre"/>
+        <p id="err-nombre" class="help" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="Apellido" required minlength="2"
+               pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(?:[\s'-][A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*$"
+               aria-describedby="err-apellido"/>
+        <p id="err-apellido" class="help" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required placeholder="tu@correo.com"
+               aria-describedby="err-email"/>
+        <p id="err-email" class="help" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="edad">Edad <span class="muted">(opcional)</span></label>
+        <input type="number" id="edad" name="Edad" min="5" max="120" aria-describedby="err-edad"/>
+        <p id="err-edad" class="help" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="comentario">Comentario</label>
+        <textarea id="comentario" name="Comentario" rows="6" required minlength="10" maxlength="500"
+                  aria-describedby="err-comentario"
+                  placeholder="Contame en pocas líneas qué te gustaría decirme…"></textarea>
+        <div class="contador" aria-hidden="true"><span id="chars">0</span>/500</div>
+        <p id="err-comentario" class="help" aria-live="polite"></p>
+      </div>
+
+      <fieldset class="campo">
+        <legend>¿Cómo preferís que te responda?</legend>
+        <label class="opcion"><input type="radio" name="Contacto" value="Email" checked> Email</label>
+        <label class="opcion"><input type="radio" name="Contacto" value="WhatsApp"> WhatsApp</label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn--primary">Enviar</button>
+        <button type="reset" class="btn btn--ghost">Limpiar</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p class="footertexto">Autor/a: Milagros Carvajal — 2025</p>
+  </footer>
+
+  <button class="to-top" aria-label="Subir">↑</button>
+  <script src="js/form.js?v=2"></script>
+  <script>
+    const nav = document.querySelector('.nav');
+    const toggle = document.querySelector('.nav-toggle');
+    toggle?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    document.querySelector('.to-top')?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

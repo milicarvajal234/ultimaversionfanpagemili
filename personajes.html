@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personajes | Gilmore Girls</title>
+  <link rel="stylesheet" href="css/estiloscolores.css?v=7" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="nav-list">
+        <li><a href="index.html" class="textobotton">HOME</a></li>
+        <li><a href="personajes.html" class="textobotton" aria-current="page">Personajes</a></li>
+        <li><a href="episodios.html" class="textobotton">Episodios</a></li>
+        <li><a href="contacto.html" class="textobotton">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h2 class="titulo">Personajes principales</h2>
+    <p class="subtitulo">Una reseña cortita de los favoritos del pueblo.</p>
+
+    <div class="cards">
+      <article class="card">
+        <img src="img/lorelai.jpg" alt="Lorelai Gilmore" />
+        <h4>Lorelai Gilmore</h4>
+        <p>Sarcasmo, café infinito y una gran historia con Luke. De adolescente madre a empresaria.</p>
+      </article>
+
+      <article class="card">
+        <img src="img/rory.jpg" alt="Rory Gilmore" />
+        <h4>Rory Gilmore</h4>
+        <p>Estudiante brillante que ama leer. Chilton, Yale y muchas decisiones en el camino.</p>
+      </article>
+
+      <article class="card">
+        <img src="img/luke.jpg" alt="Luke Danes" />
+        <h4>Luke Danes</h4>
+        <p>Dueño de Luke’s Diner. Cascarrabias de buen corazón, gorra para atrás y café perfecto.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>Hecho por Milagros • 2025</footer>
+  <button class="to-top" aria-label="Subir">↑</button>
+  <script>
+    const nav = document.querySelector('.nav');
+    document.querySelector('.nav-toggle')?.addEventListener('click', ()=> nav.classList.toggle('open'));
+    document.querySelector('.to-top')?.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
+</body>
+</html>

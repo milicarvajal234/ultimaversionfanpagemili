@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gilmore Girls Fan Page</title>
+  <link rel="stylesheet" href="css/estiloscolores.css?v=7" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="nav-list">
+        <li><a href="index.html" class="textobotton">HOME</a></li>
+        <li><a href="personajes.html" class="textobotton">Personajes</a></li>
+        <li><a href="episodios.html" class="textobotton">Episodios</a></li>
+        <li><a href="contacto.html" class="textobotton">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="copy">
+        <h2>Bienvenid@ a Stars Hollow</h2>
+        <p>Una fan page hecha con amor para quienes tomamos café como Lorelai y leemos como Rory.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="personajes.html">Ver personajes</a>
+          <a class="btn btn--ghost" href="episodios.html">Episodios</a>
+          <span class="badge">2000s vibes</span>
+          <span class="badge">Coffee first</span>
+        </div>
+      </div>
+      <img class="logo" src="img/logo-gilmore.jpg" alt="Logo de Gilmore Girls" />
+    </section>
+
+    <section class="section">
+      <h3>Personajes destacados</h3>
+      <div class="cards">
+        <article class="card">
+          <img src="img/lorelai.jpg" alt="Lorelai Gilmore" />
+          <h4>Lorelai Gilmore</h4>
+          <p class="meta">Dueña de Dragonfly Inn • Café y comedia rápida</p>
+        </article>
+        <article class="card">
+          <img src="img/rory.jpg" alt="Rory Gilmore" />
+          <h4>Rory Gilmore</h4>
+          <p class="meta">Chilton, Yale y miles de libros</p>
+        </article>
+        <article class="card">
+          <img src="img/luke.jpg" alt="Luke Danes" />
+          <h4>Luke Danes</h4>
+          <p class="meta">El rey del café en Luke’s Diner</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>¿Qué podés hacer acá?</h3>
+      <div class="list">
+        <div class="item">
+          <div class="kicker">Explorar</div>
+          <div class="title">Ficha de personajes</div>
+          <p>Biografías breves, fotos e info clave de tus favs.</p>
+        </div>
+        <div class="item">
+          <div class="kicker">Revivir</div>
+          <div class="title">Momentos y episodios</div>
+          <p>Un repaso por temporadas con descripciones resumidas.</p>
+        </div>
+        <div class="item">
+          <div class="kicker">Conectar</div>
+          <div class="title">Contacto</div>
+          <p>¿Ideas o sugerencias? Escribime y lo charlamos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Hecho por Milagros • 2025</footer>
+
+  <button class="to-top" aria-label="Subir">↑</button>
+  <script>
+    const nav = document.querySelector('.nav');
+    document.querySelector('.nav-toggle')?.addEventListener('click', ()=> nav.classList.toggle('open'));
+    document.querySelector('.to-top')?.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
+</body>
+</html>

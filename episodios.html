@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Episodios | Gilmore Girls</title>
+  <link rel="stylesheet" href="css/estiloscolores.css?v=11" />
+  <style>
+    .thumb { position:relative; border-radius:12px; overflow:hidden; box-shadow:var(--shadow); }
+    .thumb img{ width:100%; height:auto; display:block; transition: transform .2s ease; }
+    .thumb:hover img{ transform: scale(1.02); }
+    .thumb .overlay{
+      position:absolute; inset:0;
+      display:flex; align-items:flex-end; justify-content:space-between;
+      padding:10px 12px; color:#fff;
+      background: linear-gradient(transparent, rgba(0,0,0,.55));
+      font-weight:700;
+    }
+    .yt { text-decoration:none; color:#fff; border:1px solid rgba(255,255,255,.6); padding:6px 10px; border-radius:999px; }
+    .meta { color: var(--muted); font-size:.95rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="nav-list">
+        <li><a href="index.html" class="textobotton">HOME</a></li>
+        <li><a href="personajes.html" class="textobotton">Personajes</a></li>
+        <li><a href="episodios.html" class="textobotton" aria-current="page">Episodios</a></li>
+        <li><a href="contacto.html" class="textobotton">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h2 class="titulo">Episodios</h2>
+    <p class="subtitulo">Clips seleccionados que podés ver en YouTube.</p>
+
+    <div class="list">
+      <article class="item">
+        <div class="kicker">T1E1</div>
+        <div class="title">Pilot — Primera escena</div>
+        <p class="meta">Lorelai y Rory presentan el tono de la serie. Café, diálogos rápidos y el espíritu de Stars Hollow.</p>
+        <a class="thumb" href="https://www.youtube.com/watch?v=lC64jfjbKAI" target="_blank" rel="noopener">
+          <img src="https://img.youtube.com/vi/lC64jfjbKAI/hqdefault.jpg" alt="Pilot - primera escena">
+          <div class="overlay"><span>Ver clip</span><span class="yt">YouTube</span></div>
+        </a>
+      </article>
+
+      <article class="item">
+        <div class="kicker">T1E9</div>
+        <div class="title">Rory’s Dance — Dean y Rory</div>
+        <p class="meta">Un recorte del episodio del baile de Chilton: nervios, baile y un primer gran conflicto.</p>
+        <a class="thumb" href="https://www.youtube.com/watch?v=8b1jijvJRCY" target="_blank" rel="noopener">
+          <img src="https://img.youtube.com/vi/8b1jijvJRCY/hqdefault.jpg" alt="Rory's Dance - Dean y Rory">
+          <div class="overlay"><span>Ver clip</span><span class="yt">YouTube</span></div>
+        </a>
+      </article>
+
+      <article class="item">
+        <div class="kicker">T2E22</div>
+        <div class="title">I Can’t Get Started — Luke & Lorelai</div>
+        <p class="meta">Escena clave entre Luke y Lorelai del final de temporada 2.</p>
+        <a class="thumb" href="https://www.youtube.com/watch?v=thMSLlEvg9E" target="_blank" rel="noopener">
+          <img src="https://img.youtube.com/vi/thMSLlEvg9E/hqdefault.jpg" alt="I Can't Get Started - Luke & Lorelai">
+          <div class="overlay"><span>Ver clip</span><span class="yt">YouTube</span></div>
+        </a>
+      </article>
+    </div>
+  </main>
+
+  <footer>Hecho por Milagros • 2025</footer>
+  <button class="to-top" aria-label="Subir">↑</button>
+  <script>
+    const nav = document.querySelector('.nav');
+    document.querySelector('.nav-toggle')?.addEventListener('click', ()=> nav.classList.toggle('open'));
+    document.querySelector('.to-top')?.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
+</body>
+</html>
